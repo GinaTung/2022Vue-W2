@@ -23,7 +23,7 @@ const app = createApp({
                 const {token ,expired} =res.data;
                 console.log(token,expired)
                 document.cookie =`hexToken=${token}; expires=${new Date(expired)};`;
-                window.location='./week2.html';
+                window.location='https://ginatung.github.io/JS2022-W2/week2';
             })
             .catch((error)=>{
                 console.log(error)
