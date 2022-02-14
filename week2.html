@@ -18,7 +18,7 @@
                
                 <h2>產品列表</h2>
                 <button type="button" class="btn btn-lg w-10 mt-3 btn-info " v-on:click="tempProduct=item">
-                  <a href="https://ginatung.github.io/JS2022-W2/" class="text-light "style="text-decoration:none;">回首頁</a>
+                  <a href="https://ginatung.github.io/JS2022-W3/" class="text-light "style="text-decoration:none;">回首頁</a>
                   </button>
               </div>
               
@@ -64,7 +64,7 @@
             </div>
             <div class="col-md-6">
               <h2>單一產品細節</h2>
-              <template v-if="tempProduct">
+              <template v-if="tempProduct.title">
                 <div class="card mb-3">
                   <img :src="tempProduct.imageUrl" class="card-img-top primary-image" alt="主圖">
                   <div class="card-body">
