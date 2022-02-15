@@ -72,6 +72,6 @@ const app = createApp({
     }
     
 })
-//addProductBtn.addEventListener('click', addProduct)
+addProductBtn.addEventListener('click', addProduct)
     
 app.mount('#app');
