@@ -22,6 +22,7 @@ const app = createApp({
             axios.post(url)
             .then(()=>{
                this.getProducts();
+               this.gety();
             })
 
         },
@@ -33,12 +34,44 @@ const app = createApp({
                 console.log(Object.values(this.products))//物件轉陣列
                 Object.values(this.products).forEach((item)=>{
                     console.log(item)
+
                 })
             })
-        }
+            
+        },
+        addProduct() {
+
+            const product = {
+              data: {
+                title: '[賣]動物園造型衣服99',
+                category: '衣服8',
+                origin_price: 500,
+                price: 300,
+                unit: '個',
+                description: 'Sit down please 名設計師設計',
+                content: '這是內容',
+                is_enabled: 1,
+                imageUrl: 'https://images.unsplash.com/photo-1573662012516-5cb4399006e7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80'
+    
+              }
+            }
+      
+            // #6 新增一個產品
+            axios.post(`${url}/api/${path}/admin/product`, product)
+              .then((res) => {
+                console.log(res.data)
+              })
+              .catch((error) => {
+                console.dir(error)
+              })
+          }
+        
     },
     mounted(){
         this.checkLogin();
     }
+    
 })
+//addProductBtn.addEventListener('click', addProduct)
+    
 app.mount('#app');
