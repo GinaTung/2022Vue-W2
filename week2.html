@@ -64,6 +64,7 @@
             </div>
             <div class="col-md-6">
               <h2>單一產品細節</h2>
+              <!-- v-if="tempProduct" 建議改為 v-if="tempProduct.title"，不然剛進入到產品頁時，單一產品細節的 template 樣板還是會呈現出來。 -->
               <template v-if="tempProduct.title">
                 <div class="card mb-3">
                   <img :src="tempProduct.imageUrl" class="card-img-top primary-image" alt="主圖">
