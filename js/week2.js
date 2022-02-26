@@ -27,15 +27,15 @@ const app = createApp({
 
         },
         getProducts(){
-            const url =`${site}/api/${api_path}/admin/products/all`;
+            const url =`${site}/api/${api_path}/admin/products`;
             axios.get(url)
             .then((res)=>{
                 this.products =res.data.products;
-                console.log(Object.values(this.products))//物件轉陣列
-                Object.values(this.products).forEach((item)=>{
-                    console.log(item)
+                // console.log(Object.values(this.products))//物件轉陣列
+                // Object.values(this.products).forEach((item)=>{
+                //     console.log(item)
 
-                })
+                // })
             })
             
         },
